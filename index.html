@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Markdowns</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1>My Markdowns</h1>
+    </div>
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Link</th>
+        </tr>
+        <tbody id="tabledata">
+        </tbody>
+    </table>
+    <script>
+        let data = [
+            {
+                name: 'Startups Of the Year 2023',
+                path: 'startups_of_the_year_2023.md',
+            },
+        ];
+        let tabledata = document.getElementById('tabledata');
+        for (let i = 0; i < data.length; i++) {
+            let tr = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            let a = document.createElement('a');
+            a.setAttribute('href',data[i].path);
+            a.innerText = data[i].name;   
+            td1.textContent = i+1;
+            td2.textContent = data[i].name
+            td3.appendChild(a);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);            
+            tabledata.appendChild(tr);
+        }
+    </script>
+</body>
+</html>
