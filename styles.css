@@ -13,5 +13,3 @@ tr:nth-child(even) {
   background-color: rgba(150, 212, 212, 0.4);
   
 }
-
-tbody:hover {background-color: yellow;}

@@ -3,6 +3,10 @@ let data = [
     name: 'Startups Of the Year 2023',
     path: 'startups_of_the_year_2023.md',
   },
+  {
+    name: 'Hackenoon Companies of the Week',
+    path: 'hackernoon_companies_trend_04_06_2023.md',
+  },
 ];
 let tabledata = document.getElementById('tabledata');
 console.log(tabledata);
