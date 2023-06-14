@@ -16,6 +16,7 @@
             <th>S.no</th>
             <th>Name</th>
             <th>Link</th>
+            <th>Markdown Page</th>
         </tr>
         <tbody id="tabledata">
         </tbody>
@@ -24,15 +25,18 @@
         let data = [
             {
                 name: 'Startups Of the Year 2023',
-                path: 'startups_of_the_year_2023.md',
+                path: 'startups_of_the_year_2023.html',
+                markdown:'startups_of_the_year_2023.md'
             },
             {
                 name: 'Hackenoon Companies of the Week',
-                path: 'hackernoon_companies_trend_04_06_2023.md',
+                path: 'hackernoon_companies_trend_04_06_2023.html',
+                markdown:'hackernoon_companies_trend_04_06_2023.md'
             },
             {
                 name: 'AI Tools',
-                path: 'other_ai_tools.md',
+                path: 'other_ai_tools.html',
+                markdown:'other_ai_tools.md'
             },
         ];
         let tabledata = document.getElementById('tabledata');
@@ -41,15 +45,21 @@
             let td1 = document.createElement('td');
             let td2 = document.createElement('td');
             let td3 = document.createElement('td');
-            let a = document.createElement('a');
-            a.setAttribute('href',data[i].path);
-            a.innerText = data[i].name;   
+            let td4 = document.createElement('td');
+            let a1 = document.createElement('a');
+            a1.setAttribute('href',data[i].path);
+            a1.innerText = data[i].name; 
+            let a2 = document.createElement('a');
+            a2.setAttribute('href', data[i].markdown);
+            a2.innerText = data[i].name;  
             td1.textContent = i+1;
             td2.textContent = data[i].name
-            td3.appendChild(a);
+            td3.appendChild(a1);
+            td4.appendChild(a2);
             tr.appendChild(td1);
             tr.appendChild(td2);
-            tr.appendChild(td3);            
+            tr.appendChild(td3);
+            tr.appendChild(td4);            
             tabledata.appendChild(tr);
         }
     </script>

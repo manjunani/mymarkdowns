@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <table>
+<thead>
+<tr>
+<th>Name</th>
+<th>URL</th>
+<th>Rank</th>
+<th>StockPrice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instagram</td>
+<td><a href="https://instagram.com">https://instagram.com</a></td>
+<td>Weekly Rank: #1</td>
+<td>Stock Price: $272.61</td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td><a href="https://facebook.com">https://facebook.com</a></td>
+<td>Weekly Rank: #2</td>
+<td>Stock Price: $272.61</td>
+</tr>
+<tr>
+<td>Google</td>
+<td><a href="https://google.com">https://google.com</a></td>
+<td>Weekly Rank: #3</td>
+<td>Stock Price: $124.67</td>
+</tr>
+<tr>
+<td>inDrive.Tech</td>
+<td><a href="https://indrive.tech">https://indrive.tech</a></td>
+<td>Weekly Rank: #4</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Netflix</td>
+<td><a href="https://netflix.com">https://netflix.com</a></td>
+<td>Weekly Rank: #5</td>
+<td>Stock Price: $400.47</td>
+</tr>
+<tr>
+<td>Apple</td>
+<td><a href="https://apple.com">https://apple.com</a></td>
+<td>Weekly Rank: #6</td>
+<td>Stock Price: $180.95</td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td><a href="https://amazon.com">https://amazon.com</a></td>
+<td>Weekly Rank: #7</td>
+<td>Stock Price: $124.25</td>
+</tr>
+<tr>
+<td>Tenable</td>
+<td><a href="https://tenable.com">https://tenable.com</a></td>
+<td>Weekly Rank: #8</td>
+<td>Stock Price: $40.74</td>
+</tr>
+<tr>
+<td>Twitter</td>
+<td><a href="https://twitter.com">https://twitter.com</a></td>
+<td>Weekly Rank: #9</td>
+<td>Stock Price: $53.7</td>
+</tr>
+<tr>
+<td>AT&amp;T</td>
+<td><a href="https://att.com">https://att.com</a></td>
+<td>Weekly Rank: #10</td>
+<td>Stock Price: $15.21</td>
+</tr>
+<tr>
+<td>Discord</td>
+<td><a href="https://discord.com">https://discord.com</a></td>
+<td>Weekly Rank: #11</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Farmers Support</td>
+<td><a href="https://farmers-s.co.jp">https://farmers-s.co.jp</a></td>
+<td>Weekly Rank: #12</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Humana</td>
+<td><a href="https://humana.com">https://humana.com</a></td>
+<td>Weekly Rank: #13</td>
+<td>Stock Price: $520.78</td>
+</tr>
+<tr>
+<td>Y Combinator</td>
+<td><a href="https://ycombinator.com">https://ycombinator.com</a></td>
+<td>Weekly Rank: #14</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>BairesDev</td>
+<td><a href="https://bairesdev.com">https://bairesdev.com</a></td>
+<td>Weekly Rank: #15</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Laura</td>
+<td><a href="https://laura-br.com">https://laura-br.com</a></td>
+<td>Weekly Rank: #16</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Roblox</td>
+<td><a href="https://roblox.com">https://roblox.com</a></td>
+<td>Weekly Rank: #17</td>
+<td>Stock Price: $40.34</td>
+</tr>
+<tr>
+<td>Adidas</td>
+<td><a href="https://adidas-group.com">https://adidas-group.com</a></td>
+<td>Weekly Rank: #18</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>SportyBet Kenya</td>
+<td><a href="https://sportybet.com">https://sportybet.com</a></td>
+<td>Weekly Rank: #19</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>General Motors</td>
+<td><a href="https://gm.com">https://gm.com</a></td>
+<td>Weekly Rank: #20</td>
+<td>Stock Price: $34.28</td>
+</tr>
+<tr>
+<td>Stripe</td>
+<td><a href="https://stripe.com">https://stripe.com</a></td>
+<td>Weekly Rank: #21</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Vidio</td>
+<td><a href="https://vidio.com">https://vidio.com</a></td>
+<td>Weekly Rank: #22</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td><a href="https://youtube.com">https://youtube.com</a></td>
+<td>Weekly Rank: #23</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Coinbase</td>
+<td><a href="https://coinbase.com">https://coinbase.com</a></td>
+<td>Weekly Rank: #24</td>
+<td>Stock Price: $64.55</td>
+</tr>
+<tr>
+<td>Meta</td>
+<td><a href="https://meta.com">https://meta.com</a></td>
+<td>Weekly Rank: #25</td>
+<td>Stock Price: $272.61</td>
+</tr>
+<tr>
+<td>MOTIF®</td>
+<td><a href="https://wemotif.com">https://wemotif.com</a></td>
+<td>Weekly Rank: #26</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Nintendo</td>
+<td><a href="https://nintendo.com">https://nintendo.com</a></td>
+<td>Weekly Rank: #27</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>OpenXcell</td>
+<td><a href="https://openxcell.com">https://openxcell.com</a></td>
+<td>Weekly Rank: #28</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Pinterest</td>
+<td><a href="https://pinterest.com">https://pinterest.com</a></td>
+<td>Weekly Rank: #29</td>
+<td>Stock Price: $23.47</td>
+</tr>
+<tr>
+<td>Alongside</td>
+<td><a href="https://alongside.com">https://alongside.com</a></td>
+<td>Weekly Rank: #30</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Casino Alpha</td>
+<td><a href="https://casinoalpha.com">https://casinoalpha.com</a></td>
+<td>Weekly Rank: #31</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Konstant Infosolutions</td>
+<td><a href="https://konstantinfo.com">https://konstantinfo.com</a></td>
+<td>Weekly Rank: #32</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Gold Standard Diagnostics USA</td>
+<td><a href="https://linkedin.com">https://linkedin.com</a></td>
+<td>Weekly Rank: #33</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Lisk</td>
+<td><a href="https://lisk.io">https://lisk.io</a></td>
+<td>Weekly Rank: #34</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Monarch</td>
+<td><a href="https://monarchnc.org">https://monarchnc.org</a></td>
+<td>Weekly Rank: #35</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Reddit</td>
+<td><a href="https://reddit.com">https://reddit.com</a></td>
+<td>Weekly Rank: #36</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Target</td>
+<td><a href="https://target.com">https://target.com</a></td>
+<td>Weekly Rank: #37</td>
+<td>Stock Price: $133.22</td>
+</tr>
+<tr>
+<td>Uber</td>
+<td><a href="https://eng.uber.com">https://eng.uber.com</a></td>
+<td>Weekly Rank: #38</td>
+<td>Stock Price: $39.73</td>
+</tr>
+<tr>
+<td>AgileEngine</td>
+<td><a href="https://agileengine.com">https://agileengine.com</a></td>
+<td>Weekly Rank: #39</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>AirBnB</td>
+<td><a href="https://airbnb.com">https://airbnb.com</a></td>
+<td>Weekly Rank: #40</td>
+<td>Stock Price: $118.06</td>
+</tr>
+<tr>
+<td>Apache</td>
+<td><a href="https://apachecorp.com">https://apachecorp.com</a></td>
+<td>Weekly Rank: #41</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Assembly</td>
+<td><a href="https://assemblypayments.com">https://assemblypayments.com</a></td>
+<td>Weekly Rank: #42</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>ATLASSIAN</td>
+<td><a href="https://atlassian.com">https://atlassian.com</a></td>
+<td>Weekly Rank: #43</td>
+<td>Stock Price: $183.9</td>
+</tr>
+<tr>
+<td>Ayasdi</td>
+<td><a href="https://ayasdi.com">https://ayasdi.com</a></td>
+<td>Weekly Rank: #44</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Blink</td>
+<td><a href="https://blinkforhome.com">https://blinkforhome.com</a></td>
+<td>Weekly Rank: #45</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Genome</td>
+<td><a href="https://genome.eu">https://genome.eu</a></td>
+<td>Weekly Rank: #46</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td><a href="https://microsoft.com">https://microsoft.com</a></td>
+<td>Weekly Rank: #47</td>
+<td>Stock Price: $335.4</td>
+</tr>
+<tr>
+<td>Mashable</td>
+<td><a href="https://mashable.com">https://mashable.com</a></td>
+<td>Weekly Rank: #48</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>3M</td>
+<td><a href="https://3m.com">https://3m.com</a></td>
+<td>Weekly Rank: #49</td>
+<td>Stock Price: $102.53</td>
+</tr>
+<tr>
+<td>TMS</td>
+<td><a href="https://tms-japan.co.jpen/index.html">https://tms-japan.co.jpen/index.html</a></td>
+<td>Weekly Rank: #50</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Quixy</td>
+<td><a href="https://quixy.com">https://quixy.com</a></td>
+<td>Weekly Rank: #51</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Dexence</td>
+<td><a href="https://dexence.io">https://dexence.io</a></td>
+<td>Weekly Rank: #52</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Etherspot</td>
+<td><a href="https://etherspot.io">https://etherspot.io</a></td>
+<td>Weekly Rank: #53</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>LensAI</td>
+<td><a href="https://lens-ai.comcontacts.html">https://lens-ai.comcontacts.html</a></td>
+<td>Weekly Rank: #54</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Wave Money</td>
+<td><a href="https://wavemoney.com.mm">https://wavemoney.com.mm</a></td>
+<td>Weekly Rank: #55</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>BYD</td>
+<td><a href="https://byd.com">https://byd.com</a></td>
+<td>Weekly Rank: #56</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Cintas</td>
+<td><a href="https://cintas.com">https://cintas.com</a></td>
+<td>Weekly Rank: #57</td>
+<td>Stock Price: $481.56</td>
+</tr>
+<tr>
+<td>Dapp</td>
+<td><a href="https://dapp.mx">https://dapp.mx</a></td>
+<td>Weekly Rank: #58</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Binance</td>
+<td><a href="https://binance.com">https://binance.com</a></td>
+<td>Weekly Rank: #59</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Boddle</td>
+<td><a href="https://boddlelearning.com">https://boddlelearning.com</a></td>
+<td>Weekly Rank: #60</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Intellectsoft</td>
+<td><a href="https://intellectsoft.net">https://intellectsoft.net</a></td>
+<td>Weekly Rank: #61</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Lunar Crush</td>
+<td><a href="https://lunarcrush.com">https://lunarcrush.com</a></td>
+<td>Weekly Rank: #62</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>QINGDAO HAIER</td>
+<td><a href="https://haier.net">https://haier.net</a></td>
+<td>Weekly Rank: #63</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Slack</td>
+<td><a href="https://slack.com">https://slack.com</a></td>
+<td>Weekly Rank: #64</td>
+<td>Stock Price: $213.03</td>
+</tr>
+<tr>
+<td>TikTok for Business</td>
+<td><a href="https://tiktok.com">https://tiktok.com</a></td>
+<td>Weekly Rank: #65</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Whatnot</td>
+<td><a href="https://whatnot.com">https://whatnot.com</a></td>
+<td>Weekly Rank: #66</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Avalanche</td>
+<td><a href="https://avax.network">https://avax.network</a></td>
+<td>Weekly Rank: #67</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Belitsoft</td>
+<td><a href="https://belitsoft.com">https://belitsoft.com</a></td>
+<td>Weekly Rank: #68</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Cake DeFi</td>
+<td><a href="https://cakedefi.com">https://cakedefi.com</a></td>
+<td>Weekly Rank: #69</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>CAPGEMINI</td>
+<td><a href="https://capgemini.com">https://capgemini.com</a></td>
+<td>Weekly Rank: #70</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td><a href="http://Indeed.com">Indeed.com</a></td>
+<td><a href="https://indeed.com">https://indeed.com</a></td>
+<td>Weekly Rank: #71</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Itransition</td>
+<td><a href="https://itransition.com">https://itransition.com</a></td>
+<td>Weekly Rank: #72</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Jukumari Advice</td>
+<td><a href="https://jukumariadvice.com">https://jukumariadvice.com</a></td>
+<td>Weekly Rank: #73</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Legitify</td>
+<td><a href="https://legitify.eu">https://legitify.eu</a></td>
+<td>Weekly Rank: #74</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>mParticle</td>
+<td><a href="https://mparticle.com">https://mparticle.com</a></td>
+<td>Weekly Rank: #75</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Riff Analytics</td>
+<td><a href="https://riffanalytics.ai">https://riffanalytics.ai</a></td>
+<td>Weekly Rank: #76</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Sysco</td>
+<td><a href="https://sysco.com">https://sysco.com</a></td>
+<td>Weekly Rank: #77</td>
+<td>Stock Price: $72.64</td>
+</tr>
+<tr>
+<td>Catch</td>
+<td><a href="https://catch.com.au">https://catch.com.au</a></td>
+<td>Weekly Rank: #78</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>UClean</td>
+<td><a href="https://uclean.in">https://uclean.in</a></td>
+<td>Weekly Rank: #79</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Vinsol</td>
+<td><a href="https://vinsol.com">https://vinsol.com</a></td>
+<td>Weekly Rank: #80</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>WhatsApp</td>
+<td><a href="https://whatsapp.com">https://whatsapp.com</a></td>
+<td>Weekly Rank: #81</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>9 to 5 Mac</td>
+<td><a href="https://9to5mac.com">https://9to5mac.com</a></td>
+<td>Weekly Rank: #82</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Adobe</td>
+<td><a href="https://adobe.com">https://adobe.com</a></td>
+<td>Weekly Rank: #83</td>
+<td>Stock Price: $436.37</td>
+</tr>
+<tr>
+<td>AllianceTek</td>
+<td><a href="https://alliancetek.com">https://alliancetek.com</a></td>
+<td>Weekly Rank: #84</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Alphabet</td>
+<td><a href="https://abc.xyz">https://abc.xyz</a></td>
+<td>Weekly Rank: #85</td>
+<td>Stock Price: $125.23</td>
+</tr>
+<tr>
+<td>AltexSoft</td>
+<td><a href="https://altexsoft.com">https://altexsoft.com</a></td>
+<td>Weekly Rank: #86</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>American Express</td>
+<td><a href="https://americanexpress.com">https://americanexpress.com</a></td>
+<td>Weekly Rank: #87</td>
+<td>Stock Price: $168.56</td>
+</tr>
+<tr>
+<td><a href="http://Authorize.Net">Authorize.Net</a></td>
+<td><a href="https://authorize.net">https://authorize.net</a></td>
+<td>Weekly Rank: #88</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Awari</td>
+<td><a href="https://awari.com.br">https://awari.com.br</a></td>
+<td>Weekly Rank: #89</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Bed Bath &amp; Beyond</td>
+<td><a href="https://bedbathandbeyond.com">https://bedbathandbeyond.com</a></td>
+<td>Weekly Rank: #90</td>
+<td>Stock Price: $0.249</td>
+</tr>
+<tr>
+<td>BNBChain</td>
+<td><a href="https://bnbchain.org">https://bnbchain.org</a></td>
+<td>Weekly Rank: #91</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Boomtown</td>
+<td><a href="https://goboomtown.com">https://goboomtown.com</a></td>
+<td>Weekly Rank: #92</td>
+<td>Stock Price: N/A</td>
+</tr>
+<tr>
+<td>Botpress</td>
+<td><a href="https://botpress.com">https://botpress.com</a></td>
+<td>Weekly Rank: #93</td>
+<td>Stock Price: N/A</td>
+</tr>
+</tbody>
+</table>
+
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </body>
+    </html>
