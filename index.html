@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>My Markdowns</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div>
         <h1>My Markdowns</h1>
@@ -26,18 +28,23 @@
             {
                 name: 'Startups Of the Year 2023',
                 path: 'startups_of_the_year_2023.html',
-                markdown:'startups_of_the_year_2023.md'
+                markdown: 'startups_of_the_year_2023.md'
             },
             {
                 name: 'Hackenoon Companies of the Week',
                 path: 'hackernoon_companies_trend_04_06_2023.html',
-                markdown:'hackernoon_companies_trend_04_06_2023.md'
+                markdown: 'hackernoon_companies_trend_04_06_2023.md'
             },
             {
                 name: 'AI Tools',
                 path: 'other_ai_tools.html',
-                markdown:'other_ai_tools.md'
+                markdown: 'other_ai_tools.md'
             },
+            {
+                name: 'Differences Between Backend as a Service Providers',
+                path: 'differences between firebase and other backend as a service providers.html',
+                markdown: 'differences between firebase and other backend as a service providers.md'
+            }
         ];
         let tabledata = document.getElementById('tabledata');
         for (let i = 0; i < data.length; i++) {
@@ -47,21 +54,22 @@
             let td3 = document.createElement('td');
             let td4 = document.createElement('td');
             let a1 = document.createElement('a');
-            a1.setAttribute('href',data[i].path);
-            a1.innerText = data[i].name; 
+            a1.setAttribute('href', data[i].path);
+            a1.innerText = data[i].name;
             let a2 = document.createElement('a');
             a2.setAttribute('href', data[i].markdown);
-            a2.innerText = data[i].name;  
-            td1.textContent = i+1;
+            a2.innerText = data[i].name;
+            td1.textContent = i + 1;
             td2.textContent = data[i].name
             td3.appendChild(a1);
             td4.appendChild(a2);
             tr.appendChild(td1);
             tr.appendChild(td2);
             tr.appendChild(td3);
-            tr.appendChild(td4);            
+            tr.appendChild(td4);
             tabledata.appendChild(tr);
         }
     </script>
 </body>
+
 </html>

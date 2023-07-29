@@ -7,6 +7,10 @@ let data = [
     name: 'Hackenoon Companies of the Week',
     path: 'hackernoon_companies_trend_04_06_2023.md',
   },
+  {
+    name: 'Differences Between Backend as a Service Providers',
+    path: 'differences between firebase and other backend as a service providers.md'
+  }
 ];
 let tabledata = document.getElementById('tabledata');
 console.log(tabledata);
